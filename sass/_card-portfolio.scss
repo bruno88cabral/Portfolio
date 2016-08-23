@@ -1,0 +1,66 @@
+@mixin font-color($name,$color){
+		.body-card{
+			&.#{$name}{
+				color: darken($color,15%);
+			}
+		}
+	}
+.card-portfolio{
+	@extend .col-xs-12;
+	@extend .col-md-6;
+	@extend .col-lg-4;
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+	.img-card{
+		@extend .img-fluid;
+		width: 100%;
+	}
+	.body-card{
+		@extend .clearfix;
+		background-color: #eee;
+		color: darken(#004182,10%);		
+		.card-comp,
+		.card-name{
+			padding: 0.5rem 0.2rem 0.2rem 0.2rem;
+		}
+		.card-comp{
+			@extend .col-xs-8;
+			padding: 0;
+			border-right: solid 0.1rem #fff;
+			.card-desc{
+				border-bottom: solid 0.1rem #fff;
+				.desc{
+					font-size: 80%;
+					margin: 0.3rem;
+				}
+			}
+			.card-tools{
+				.tools-port{
+					font-size: 68%;
+					margin: 0.3rem;
+				}
+			}
+		}
+		.card-name{
+			@extend .col-xs-4;
+			padding: 0.5rem 0rem 0.5rem 0.5rem;
+			display: block;
+			.name{
+				font-size: 100%;
+				margin-bottom: 0;
+			}
+			.site{
+				font-size: 50%;
+				@media(min-width: map-get($grid-breakpoints,lg)){
+					font-size: 80%;
+				}
+			}
+		}		
+	}
+	@include font-color('adjau',#F4E511);
+	@include font-color('barberjahu',#555);
+	@include font-color('gucabral',#067242);
+	@include font-color('prematuro',#FCBAD3);
+	@include font-color('nicca',#AA96DA);	
+}
+

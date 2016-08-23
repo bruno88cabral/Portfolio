@@ -1,0 +1,42 @@
+.skills{
+	@extend .col-xs-12;
+	@extend .col-lg-6;
+	margin-top: 0;
+		.skill-section{
+			background-color: #fff;
+			margin-bottom: 0;
+			.titulo{
+				margin-top: 0;
+				font-size: 2rem;
+			}
+		.niveis{
+			@extend .clearfix;
+			border-bottom: solid 1px #000;
+			margin-bottom: 1rem;
+		.nivel{
+			@extend .col-xs-3;
+			text-align: center;
+			.nivel-skill{
+				font-size: 75%;
+				}
+			}
+		}
+		.progress-pad{
+			padding: 0rem 0.8rem;
+			.progress-skill{
+			@extend .progress;
+			width: 100%;
+			}
+		}
+		.frase-diviser{
+			margin: 1.85rem 1.5rem 1.5rem 1.5rem;
+			background-color: black;
+		}
+		.frase{
+			text-align: center;
+			line-height: 1rem;
+			font-size: 85%;
+			padding: 0.9rem 0rem 2rem 0rem;
+		}
+	}
+}

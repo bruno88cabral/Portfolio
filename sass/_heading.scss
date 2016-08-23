@@ -1,0 +1,21 @@
+.heading{
+	padding-right: 1rem;
+	.heading-menu{
+		@extend .col-lg-1;
+		@extend .col-md-1;
+		@extend .col-xs-3;
+		display: block;
+	}
+	.heading-typer{
+		@extend .col-lg-11;
+		@extend .col-md-11;
+		@extend .col-xs-9;
+		background-color: #eee;
+		height: 4rem;
+		margin-bottom: 5%;		
+		.typper{
+			color: lighten(#393E46,5%);
+			font-size: 0;			
+		}
+	}
+}

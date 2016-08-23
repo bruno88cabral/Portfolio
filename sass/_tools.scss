@@ -1,0 +1,32 @@
+.tools{
+	@extend .col-xs-12;
+	@extend .col-md-6;
+	@extend .col-lg-12;
+	margin-bottom: 1rem;
+	
+	.tools-body{
+		.titulo{
+			color: lighten(#393E46,30%);
+			font-size: 2rem;
+			margin-top: 0;
+		}
+		background-color: #393E46;
+		color: #00ADB5;
+		padding: 1rem 0.5rem;
+		min-height: 410px;
+		.tools-text{
+			font-size: 100%;
+			text-indent: 2rem;
+			line-height: 1.5rem;
+			margin-bottom: 0rem;
+			text-align: center;
+			@media(min-width: map-get($grid-breakpoints,lg)){
+			line-height: 2.37rem;
+			font-size: 105%;
+			}
+			.keytools{
+				font-size: 115%;
+			}
+		}
+	}
+}

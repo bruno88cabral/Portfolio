@@ -1,0 +1,38 @@
+.footer{
+	@extend .col-xs-12;
+	background-color: #222831;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 0rem 25rem;
+	}
+	.chevron{
+		@extend .col-xs-12;
+		text-align: center;
+		font-size: 1.3rem;
+		.link-chevron{			
+		color: #00ADB5;
+		}
+	}
+	.contato-footer{
+		@extend .nav;
+	.list-footer{
+		@extend .col-xs-3;
+		@extend .nav-item;
+		text-align: center;		
+		.link-footer{
+			@extend .nav-link;
+			color: #eee;
+			font-size: 160%;
+			display: block;
+			.fa{				
+			padding-bottom: 0.8rem;
+				}
+			}
+		}
+	}
+	.email-footer{
+		text-align: center;
+		font-weight: 600;
+		color: #00ADB5;
+		margin-bottom: 0.5rem;
+	}
+}

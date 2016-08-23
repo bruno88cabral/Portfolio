@@ -1,0 +1,106 @@
+@mixin resume-custom($name,$darkencolor,$color,$font-color){
+	.resume-box{
+		&.#{$name}{
+			.symbol{
+				background-color:$darkencolor;
+				}
+			.resume-body{
+				background-color: $color;
+				.resume-name{
+					color: $font-color;				
+					}		
+				}
+			}
+		}
+	}
+	
+.titulo{
+	color: #222831;
+	text-align: center;
+	margin: 1rem 0;
+	@extend .clearfix;
+	font-size: 2.5rem;
+}
+.resume{
+	.resume-box{
+		height: 70px;
+		@extend .col-xs-12;
+		@extend .col-md-6;
+		@extend .col-lg-3;
+		margin-bottom: 1.8rem;
+		.symbol{
+			width: 30%;
+			background-color: darken(#3498db,15%);
+			float: left;
+			line-height: 85px;
+			text-align: center;
+		}
+		.resume-body{
+			background-color: #3498db;
+			width: 70%;
+			float: left;
+			height: 85px;
+			color: #ddd;
+			.resume-value{
+				margin-top: 0.5rem;
+				font-size: 150%;
+				padding-bottom: .1rem;
+			}
+			.resume-name{
+				font-size: 120%;
+				color: darken(#3498db,22%);
+			}
+		}
+		.resume-value,
+		.resume-name{
+			padding-left: 1rem;
+		}
+	}
+	/*variaveis*/
+	$process: #2ecc71;
+	$darken-process: darken($process,15%);
+	$cursing: #9b59b6;
+	$darken-cursing: darken($cursing,15%);
+	$time: #e74c3c;
+	$darken-time: darken($time,15%);
+
+
+	@include resume-custom('process',$darken-process,$process,darken($process,22%));
+	@include resume-custom('cursing',$darken-cursing,$cursing,darken($cursing,22%));
+	@include resume-custom('time',$darken-time,$time,darken($time,22%));
+
+	.resume-atividade{
+		@extend .col-xs-12;		
+		padding-top: 1rem;
+		.title-atividade{
+			background-color: darken(#34495e,10%);
+			@extend .clearfix;
+			.title{
+				font-size: 150%;
+				padding: 0.5rem 0rem;
+				margin: 0;
+				.clockman{
+					margin-right: 1rem;
+				}
+			}
+		}
+		.txt-atividade{
+			background-color: #34495e;
+			padding: 0.5rem;
+			margin-bottom: 1rem;
+			color: lighten(#34495e,50%);
+
+			.atividade{
+				padding: 0;
+				margin: 0;
+			}
+		}
+		.title-atividade{
+			color: #607B96;
+		}
+		.title-atividade,
+		.txt-atividade{
+			text-align: center;
+		}
+	}
+}
